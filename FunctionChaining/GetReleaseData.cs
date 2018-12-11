@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
+using FunctionChaining.Models;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+
+namespace FunctionChaining
+{
+    public class GetReleaseData
+    {
+        [FunctionName("GetReleaseData")]
+        public async Task<Release> GetReleaseDataFunction([ActivityTrigger] string releaseTag,
+            ILogger log)
+        {
+            log.LogInformation($"[BEGIN] Get release data for releaseTag: {releaseTag}");
+            var client = new HttpClient();
+            
+            var release = new Release();
+            release.ReleaseTag = releaseTag;
+            release.CardUrls = new List<string> { "https://pivotal.com/card1", "https://pivotal.com/card2" };
+            release.GitHubPRUrls = new List<string> { "https://github.com/pr1", "https://github.com/pr2", "https://github.com/pr3" };
+            release.ServicesDeployed = new List<string> { "EmailService", "OrderService" };
+            release.TimeOfRelease = DateTime.Now;
+
+            log.LogInformation($"[END] Get release data for releaseTag: {releaseTag}");
+
+            return release;
+        }
+    }
+
+    public class GitHubData
+    {
+        public string Url { get; set; }
+        public string Title { get; set; }
+    }
+}

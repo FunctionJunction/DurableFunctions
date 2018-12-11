@@ -21,27 +21,9 @@ namespace FunctionChaining
 
             var releaseData = await context.CallActivityAsync<Release>("GetReleaseData", "release-1");
             //await context.CallActivityAsync("SendReleaseEmail", releaseData);
-            await context.CallActivityAsync("SendSlackNotification", releaseData);
+            //await context.CallActivityAsync("SendSlackNotification", releaseData);
 
             return new List<string>();
-        }
-
-        [FunctionName("GetReleaseData")]
-        public static Release GetReleaseData([ActivityTrigger] string releaseTag,
-            ILogger log)
-        {
-            log.LogInformation($"[BEGIN] Get release data for releaseTag: {releaseTag}");
-
-            var release = new Release();
-            release.ReleaseTag = releaseTag;
-            release.CardUrls = new List<string> { "https://pivotal.com/card1", "https://pivotal.com/card2" };
-            release.GitHubPRUrls = new List<string> { "https://github.com/pr1", "https://github.com/pr2", "https://github.com/pr3" };
-            release.ServicesDeployed = new List<string> { "EmailService", "OrderService"}; 
-            release.TimeOfRelease = DateTime.Now;
-
-            log.LogInformation($"[END] Get release data for releaseTag: {releaseTag}");
-
-            return release;
         }
 
         [FunctionName("SendReleaseEmail")]
