@@ -11,5 +11,6 @@ namespace FunctionChaining.Models
         public List<string> GitHubPRUrls { get; set; }
         public List<string> ServicesDeployed { get; set; }
         public DateTime TimeOfRelease { get; set; }
+        public List<GitHubData> GitHubData { get; set; }
     }
 }
