@@ -11,16 +11,16 @@ namespace FunctionChaining
     public static class ReleaseNotifier
     {
         [FunctionName("ReleaseNotifierOrchestrator")]
-        public static async Task<List<string>> RunOrchestrator(
+        public static async Task RunOrchestrator(
             [OrchestrationTrigger] DurableOrchestrationContext context, ILogger log)
         {
-            log.LogInformation($"Entering the ReleaseNotifierOrchestrator for context.InstanceId: {context.InstanceId}");
+            log.LogInformation($"[BEGIN] ReleaseNotifierOrchestrator for context.InstanceId: {context.InstanceId}");
 
             var releaseData = await context.CallActivityAsync<Release>("GetReleaseData", "release1");
             await context.CallActivityAsync("SendReleaseEmail", releaseData);
             await context.CallActivityAsync("SendSlackNotification", releaseData);
 
-            return new List<string>();
+            log.LogInformation($"[END] ReleaseNotifierOrchestrator for context.InstanceId: {context.InstanceId}");
         }
 
         [FunctionName("ReleaseNotifier_HttpStart")]

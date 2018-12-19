@@ -11,12 +11,12 @@ using Newtonsoft.Json;
 
 namespace FunctionChaining
 {
-    public class GetReleaseData
+    public class BuildReleaseData
     {
         private readonly string GitHubApiOAuthToken = Environment.GetEnvironmentVariable("GitHubApiOAuthToken");
 
         [FunctionName("GetReleaseData")]
-        public async Task<Release> GetReleaseDataFunction([ActivityTrigger] string releaseTag,
+        public async Task<Release> GetReleaseData([ActivityTrigger] string releaseTag,
             ILogger log)
         {
             log.LogInformation($"[BEGIN] Get release data for releaseTag: {releaseTag}");
