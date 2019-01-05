@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionChaining", "FunctionChaining\FunctionChaining.csproj", "{421C5F77-35A6-489F-870D-81C385B7588A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanOut", "FanOut\FanOut.csproj", "{B59172B1-18ED-4D8D-B681-5A7A0FA4EBAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{87AC179F-132E-4AA6-BEC7-543D03A63F6D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{421C5F77-35A6-489F-870D-81C385B7588A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{421C5F77-35A6-489F-870D-81C385B7588A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{421C5F77-35A6-489F-870D-81C385B7588A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B59172B1-18ED-4D8D-B681-5A7A0FA4EBAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B59172B1-18ED-4D8D-B681-5A7A0FA4EBAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B59172B1-18ED-4D8D-B681-5A7A0FA4EBAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B59172B1-18ED-4D8D-B681-5A7A0FA4EBAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87AC179F-132E-4AA6-BEC7-543D03A63F6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87AC179F-132E-4AA6-BEC7-543D03A63F6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87AC179F-132E-4AA6-BEC7-543D03A63F6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87AC179F-132E-4AA6-BEC7-543D03A63F6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

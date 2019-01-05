@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace FunctionChaining.Models
+namespace Shared.Models
 {
     public class Release
     {

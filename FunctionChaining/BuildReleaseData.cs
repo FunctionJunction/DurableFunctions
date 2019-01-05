@@ -1,13 +1,13 @@
+using Microsoft.Azure.WebJobs;
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using FunctionChaining.Models;
-using Microsoft.Azure.WebJobs;
-using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 
 namespace FunctionChaining
 {
@@ -57,11 +57,5 @@ namespace FunctionChaining
 
             return client;
         }
-    }
-    
-    public class GitHubData
-    {
-        public string Url { get; set; }
-        public string Title { get; set; }
     }
 }

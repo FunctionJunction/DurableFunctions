@@ -1,7 +1,7 @@
 using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
 using SendGrid.Helpers.Mail;
-using FunctionChaining.Models;
+using Shared.Models;
 
 namespace FunctionChaining
 {

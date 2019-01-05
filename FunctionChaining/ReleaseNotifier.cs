@@ -1,10 +1,9 @@
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Threading.Tasks;
-using FunctionChaining.Models;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
+using Shared.Models;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace FunctionChaining
 {
