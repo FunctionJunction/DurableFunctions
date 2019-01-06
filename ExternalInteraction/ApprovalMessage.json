@@ -1,0 +1,19 @@
+﻿{
+	"InstanceId": "11e180c59aa04ac28f0eabe5f2d82a3c",
+	"Applications": [
+		{
+			"Score": 7,
+			"Resume": {
+				"Name": "Bob Cratchit",
+				"YearsExperience": 5
+			}
+		},
+		{
+			"Score": 1,
+			"Resume": {
+				"Name": "Tiny Tim",
+				"YearsExperience": 1
+			}
+		}
+	]
+}
