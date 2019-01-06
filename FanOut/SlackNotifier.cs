@@ -26,7 +26,6 @@ namespace FunctionChaining
             var content = JsonConvert.SerializeObject(slackData);
 
             httpClient.PostAsync(slackWebHookUrl, new StringContent(content));
-
             log.LogInformation($"[END] Sending Slack Notification for city: {conditions.name}");
         }
 
