@@ -20,9 +20,9 @@ namespace FanOut
                 "London",
                 "Seattle",
                 "New York",
-                "Denver"
+                "Denver",
+                "Calgary"
             };
-
            
             var tasks = new List<Task<WeatherConditions>>();
             foreach (var city in cities)
