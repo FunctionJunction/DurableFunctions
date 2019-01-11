@@ -21,7 +21,7 @@ namespace Timeout
             using (var cts = new CancellationTokenSource())
             {
                 var timer = context.CreateTimer(context.CurrentUtcDateTime.AddSeconds(15), cts.Token);
-                var action = context.CallActivityAsync<string>("SometimeTimeConsuming", null);
+                var action = context.CallActivityAsync<string>("SomethingTimeConsuming", null);
 
                 var result = await Task<string>.WhenAny(timer, action);
                 if (result == action)
@@ -43,7 +43,7 @@ namespace Timeout
             log.LogInformation($"Request for approval timed out.");
         }
 
-        [FunctionName("SometimeTimeConsuming")]
+        [FunctionName("SomethingTimeConsuming")]
         public async static Task<string> SomethingTimeConsuming([ActivityTrigger] string name, ILogger log)
         {
             log.LogInformation($"Performing lengthy task.");

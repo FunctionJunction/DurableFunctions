@@ -37,7 +37,6 @@ namespace FanOut
             }
 
             await Task.WhenAll(slackTasks.ToArray());
-          
         }
         [FunctionName("DisplayWeather_HttpStart")]
         public static async Task<HttpResponseMessage> HttpStart(
